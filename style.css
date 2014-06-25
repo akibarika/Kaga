@@ -13,7 +13,9 @@
 html, body{
     height: 100%;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     background: none repeat scroll 0 0 #fff;
     color: #69606b;
@@ -30,10 +32,13 @@ h1 a {
     display: block;
     text-decoration: none;
 }
+p {
+    margin-bottom: 24px;
+}
 /*Header*/
 .head-image-wrapper{
     background-attachment: fixed;
-    background-image: url("images/hear-cover-image.jpg");
+    background-image: url("images/head-cover-image.jpg");
     background-position: center center;
     background-repeat: repeat;
     border-bottom: 1px solid #ddd;
@@ -354,7 +359,89 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     left: 50%;
     border: 1px solid #ddd;
 }
-
+/*content*/
+#main{
+    margin: 0 auto;
+    width: 100%;
+}
+#primary{
+    margin: 0 auto;
+    width: 100%;
+}
+.post{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.post .post-thumbnail {
+    background: url("images/content-cover-image.jpg") repeat fixed 0 0 #b2b2b2;
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+.post .post-thumbnail .post-image{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+.post .post-thumbnail img{
+    display: block;
+    margin: 0 auto;
+    z-index: 5;
+}
+.post .entry-header{
+    background-color: #fff;
+    display: block;
+    position: relative;
+    margin-top: -48px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 30px 12px 30px;
+}
+.post .entry-header .entry-meta{
+    background-color: #fff;
+    margin-bottom: 8px;
+    clear: both;
+    color: #767676;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33333;
+    text-transform: uppercase;
+}
+.post .entry-header .entry-meta a{
+    color: #2b2b2b;
+}
+.post .entry-header .entry-title {
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 1.09091;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+.post .entry-header .entry-title a {
+    color: #2b2b2b;
+}
+.post .entry-header .entry-meta > span {
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.post .entry-content{
+    color: #2b2b2b;
+    margin: 0 auto;
+    max-width: 560px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 30px 0 30px;
+}
 @media screen and (max-width:480px) {
     .csstransforms .cn-wrapper {
         font-size: .68em;
