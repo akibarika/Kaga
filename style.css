@@ -1,3 +1,13 @@
+/*
+Theme Name: Kaga
+Theme URI: http://work.akibarika.org
+Author: Rika Akiba
+Author URI: http://moe.akibarika.org
+Description: Preview Theme.
+Version: 0.02
+License: CC BY-NC-SA 3.0
+*/
+
 /*General*/
 *{
     position: relative;
@@ -373,8 +383,15 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     width: 100%;
     position: relative;
 }
-.post .post-thumbnail {
+.post:nth-child(odd)  .post-thumbnail {
     background: url("images/content-cover-image.jpg") repeat fixed 0 0 #b2b2b2;
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+.post:nth-child(even)  .post-thumbnail {
+    background: url("images/content-cover-image.jpg") repeat fixed 700px 0 #b2b2b2;
     display: block;
     position: relative;
     width: 100%;

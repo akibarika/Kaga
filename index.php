@@ -1,7 +1,7 @@
 <?php get_header(); ?>
             <section id="main" class="site-main">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div id="primary" class="content-area">
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <article id="post-<?php the_ID(); ?>" class="post">
                         <a class="post-thumbnail" href="<?php the_permalink() ?>" title="Permanent Link: <?php the_title(); ?>">
                             <div class="post-image"></div>
