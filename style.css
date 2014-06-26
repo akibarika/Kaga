@@ -4,7 +4,7 @@ Theme URI: http://work.akibarika.org
 Author: Rika Akiba
 Author URI: http://moe.akibarika.org
 Description: Preview Theme.
-Version: 0.02
+Version: 0.05
 License: CC BY-NC-SA 3.0
 */
 
@@ -379,7 +379,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     width: 100%;
 }
 .post{
-    margin: 0 auto;
+    margin-bottom: 48px;
     width: 100%;
     position: relative;
 }
@@ -435,6 +435,13 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .post .entry-header .entry-meta a{
     color: #2b2b2b;
 }
+.post .entry-header .entry-meta a:hover{
+    color: #40a0cf;
+}
+.post .entry-header .entry-meta .comment-link:before,
+.post .entry-header .entry-meta .time-link:before{
+    margin-right: 2px;
+}
 .post .entry-header .entry-title {
     font-size: 33px;
     font-weight: 300;
@@ -445,9 +452,10 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .post .entry-header .entry-title a {
     color: #2b2b2b;
 }
+
 .post .entry-header .entry-meta > span {
     margin-right: 10px;
-    font-weight: 900;
+    font-weight: 400;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -458,6 +466,9 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     font-size: 16px;
     font-weight: 400;
     padding: 12px 30px 0 30px;
+}
+.entry-meta > span {
+    margin-right: 10px;
 }
 @media screen and (max-width:480px) {
     .csstransforms .cn-wrapper {
