@@ -8,7 +8,7 @@
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 9999, 576, true);
-
+add_image_size( 'post-bg-img', 1337, 800, true );
 // register post formats
 add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 // register post type label args

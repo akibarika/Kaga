@@ -4,7 +4,7 @@ Theme URI: http://work.akibarika.org
 Author: Rika Akiba
 Author URI: http://moe.akibarika.org
 Description: Preview Theme.
-Version: 0.05
+Version: 0.07
 License: CC BY-NC-SA 3.0
 */
 
@@ -44,6 +44,10 @@ h1 a {
 }
 p {
     margin-bottom: 24px;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
 }
 /*Header*/
 .head-image-wrapper{
@@ -470,6 +474,141 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .entry-meta > span {
     margin-right: 10px;
 }
+
+/*single*/
+#contain{
+    height: 100%;
+}
+.intro-effect-fadeout .header {
+    overflow: hidden;
+}
+.header {
+    margin: 0 auto;
+    min-height: 560px;
+    position: relative;
+    width: 100%;
+}
+.header,.container{
+    height: 100%;
+}
+.bg-img {
+    backface-visibility: hidden;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bg-img img{
+    display: block;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+}
+.intro-effect-fadeout:not(.notrans) .bg-img:after {
+    transition-property: opacity;
+}
+.intro-effect-fadeout:not(.notrans) .bg-img {
+    transition-property: transform;
+}
+.intro-effect-fadeout .bg-img:after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    content: "";
+    height: 101%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.intro-effect-fadeout.modify .bg-img:after {
+    opacity: 1;
+}
+.intro-effect-fadeout.modify .bg-img {
+    transform: translateY(-25%);
+}
+.intro-effect-fadeout .title {
+    max-width: 900px;
+    text-align: left;
+    left: 50%;
+    margin: 0 auto;
+    padding: 0 1.25em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    z-index: 1000;
+}
+
+.title h1, .title p.subline {
+    line-height: 1;
+}
+.title h1 {
+    color: #fff;
+    font-size: 3.25em;
+    font-weight: 800;
+    margin: 0 auto;
+    padding: 0 0 0.2em;
+}
+.intro-effect-fadeout .content {
+    position: relative;
+    z-index: 1000;
+}
+.intro-effect-fadeout:not(.notrans) .header p, .intro-effect-fadeout:not(.notrans) .content > div {
+    transition-property: transform, opacity;
+}
+.intro-effect-fadeout .content > div {
+    opacity: 0;
+    transform: translateY(350px);
+}
+.content > div:not(.title) {
+    margin: -80px auto 0;
+    max-width: 900px;
+    padding: 0 1.25em;
+}
+.intro-effect-fadeout.modify .content > div {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.content > div:not(.title) {
+    margin: -80px auto 0;
+    max-width: 900px;
+    padding: 0 1.25em;
+}
+.intro-effect-fadeout .header p:nth-child(3) {
+    transform: translateX(-150px);
+}
+.intro-effect-fadeout:not(.notrans) .header p, .intro-effect-fadeout:not(.notrans) .content > div {
+    transition-property: transform, opacity;
+}
+.intro-effect-fadeout .header p {
+    opacity: 0;
+}
+.intro-effect-fadeout.modify .header h1, .intro-effect-fadeout .header p {
+    color: #514753;
+}
+.title p.subline {
+    font-size: 1.75em;
+}
+.title h1, .title p.subline {
+    line-height: 1;
+}
+.title p {
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 0 0 0.6em;
+}
+.intro-effect-fadeout:not(.notrans) .bg-img, .intro-effect-fadeout:not(.notrans) .bg-img:after, .intro-effect-fadeout:not(.notrans) .header h1, .intro-effect-fadeout:not(.notrans) .header p, .intro-effect-fadeout:not(.notrans) .content > div {
+    transition-duration: 0.5s;
+}
+
 @media screen and (max-width:480px) {
     .csstransforms .cn-wrapper {
         font-size: .68em;

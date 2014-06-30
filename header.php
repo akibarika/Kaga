@@ -25,34 +25,50 @@
 </head>
 
 <body>
-<header>
-    <div class="head-image-wrapper">
-        <div class="head-image"></div>
+    <?php if (is_home()) {?>
+    <header>
+        <div class="head-image-wrapper">
+            <div class="head-image"></div>
+        </div>
+    </header>
+    <div class="component">
+        <button class="cn-button" id="cn-button">+</button>
+        <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+                <li><a href="#"><span class="fa fa-home"></span></a></li>
+                <li><a href="#"><span class="fa fa-headphones"></span></a></li>
+                <li><a href="#"><span class="fa fa-desktop"></span></a></li>
+                <li><a href="#"><span class="fa fa-file"></span></a></li>
+                <li><a href="#"><span class="fa fa-cog"></span></a></li>
+            </ul>
+        </div>
+        <div id="cn-overlay" class="cn-overlay"></div>
     </div>
-</header>
-<div class="component">
-    <button class="cn-button" id="cn-button">+</button>
-    <div class="cn-wrapper" id="cn-wrapper">
-        <ul>
-            <li><a href="#"><span class="fa fa-home"></span></a></li>
-            <li><a href="#"><span class="fa fa-headphones"></span></a></li>
-            <li><a href="#"><span class="fa fa-desktop"></span></a></li>
-            <li><a href="#"><span class="fa fa-file"></span></a></li>
-            <li><a href="#"><span class="fa fa-cog"></span></a></li>
-        </ul>
+    <div class="blog-title content">
+        <figure class="avatar-wrapper animate">
+            <a class="user-avatar" style="background-image: url(<?php bloginfo('template_url'); ?>/images/avatar.png)" href="/">
+                <img class="print-only invisible" alt="" src="<?php bloginfo('template_url'); ?>/images/avatar.png">
+            </a>
+        </figure>
+        <div class="title-group animate">
+            <h1>
+                <a href=" <?php echo home_url(); ?> "><?php bloginfo('name'); ?></a>
+            </h1>
+            <span class="description" style="color: rgba(68, 68, 68, 0.7);"> Akiba Rika's site </span>
+        </div>
     </div>
-    <div id="cn-overlay" class="cn-overlay"></div>
-</div>
-<div class="blog-title content">
-    <figure class="avatar-wrapper animate">
-        <a class="user-avatar" style="background-image: url(<?php bloginfo('template_url'); ?>/images/avatar.png)" href="/">
-            <img class="print-only invisible" alt="" src="<?php bloginfo('template_url'); ?>/images/avatar.png">
-        </a>
-    </figure>
-    <div class="title-group animate">
-        <h1>
-            <a href=" <?php echo home_url(); ?> "><?php bloginfo('name'); ?></a>
-        </h1>
-        <span class="description" style="color: rgba(68, 68, 68, 0.7);"> Akiba Rika's site </span>
+<?php } elseif (is_single()) { ?>
+    <div class="component">
+        <button class="cn-button" id="cn-button">+</button>
+        <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+                <li><a href="#"><span class="fa fa-home"></span></a></li>
+                <li><a href="#"><span class="fa fa-headphones"></span></a></li>
+                <li><a href="#"><span class="fa fa-desktop"></span></a></li>
+                <li><a href="#"><span class="fa fa-file"></span></a></li>
+                <li><a href="#"><span class="fa fa-cog"></span></a></li>
+            </ul>
+        </div>
+        <div id="cn-overlay" class="cn-overlay"></div>
     </div>
-</div>
+<?php } ?>
