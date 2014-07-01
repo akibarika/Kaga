@@ -1,6 +1,4 @@
-<?php if (is_home()) { ?>
-        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/cNav.js"></script>
-<?php } elseif (is_single()) { ?>
+<?php if (is_single()) { ?>
         <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/cNav.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/classie.js"></script>
         <script>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?php if ( is_tag() ) { echo wp_title('Tag:');if($paged > 1) printf(' - 第%s页',$paged);echo ' | '; bloginfo( 'name' );} elseif ( is_archive() ) {echo wp_title('');  if($paged > 1) printf(' - 第%s页',$paged);    echo ' | ';    bloginfo( 'name' );} elseif ( is_search() ) {echo '&quot;'.wp_specialchars($s).'&quot;的搜索结果 | '; bloginfo( 'name' );} elseif ( is_home() ) {bloginfo( 'name' );$paged = get_query_var('paged'); if($paged > 1) printf(' - 第%s页',$paged);}  elseif ( is_404() ) {echo '页面不存在！ | '; bloginfo( 'name' );} else {echo wp_title( ' | ', false, right )  ; bloginfo( 'name' );} ?></title>
+    <title><?php if ( is_tag() ) { echo wp_title('Tag:');if($paged > 1) printf(' - 第%s页',$paged);echo ' | '; bloginfo( 'name' );} elseif ( is_archive() ) {echo wp_title('');  if($paged > 1) printf(' - 第%s页',$paged);    echo ' | ';    bloginfo( 'name' );} elseif ( is_search() ) {echo '&quot;'.wp_specialchars($s).'&quot;的搜索结果 | '; bloginfo( 'name' );} elseif ( is_home() ) {bloginfo( 'name' );$paged = get_query_var('paged'); if($paged > 1) printf(' - 第%s页',$paged);}  elseif ( is_404() ) {echo '页面不存在！ | '; bloginfo( 'name' );}elseif ( is_singular('portfolio')) {echo wp_title('');}else {echo wp_title( ' | ', false, right )  ; bloginfo( 'name' );} ?></title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -15,6 +15,7 @@
     <!-- style file -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,800,900,300,200,100' rel='stylesheet' type='text/css'>
     <script src="<?php bloginfo('template_directory'); ?>/js/imagesloaded.pkgd.min.js"></script>
     <link href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" rel="stylesheet">
     <link rel="Shortcut Icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
@@ -25,7 +26,43 @@
 </head>
 
 <body>
-    <?php if (is_home()) {?>
+<?php if (is_single()) { ?>
+    <div class="nav-menu-wrapper nav-menu-cover">
+        <nav class="nav-menu">
+            <a class="selector">
+                <div class="bar-icon-wrapper">
+                    <span class="bar-icon"></span>
+                    <span class="bar-icon"></span>
+                    <span class="bar-icon"></span>
+                </div>
+            </a>
+        </nav>
+    </div>
+    <div class="component">
+        <button class="cn-button" id="cn-button">+</button>
+        <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+                <li><a href="#"><span class="fa fa-home"></span></a></li>
+                <li><a href="#"><span class="fa fa-headphones"></span></a></li>
+                <li><a href="#"><span class="fa fa-desktop"></span></a></li>
+                <li><a href="#"><span class="fa fa-file"></span></a></li>
+                <li><a href="#"><span class="fa fa-cog"></span></a></li>
+            </ul>
+        </div>
+        <div id="cn-overlay" class="cn-overlay"></div>
+    </div>
+<?php } else {?>
+    <div class="nav-menu-wrapper nav-menu-cover">
+        <nav class="nav-menu">
+            <a class="selector">
+                <div class="bar-icon-wrapper">
+                    <span class="bar-icon"></span>
+                    <span class="bar-icon"></span>
+                    <span class="bar-icon"></span>
+                </div>
+            </a>
+        </nav>
+    </div>
     <header>
         <div class="head-image-wrapper">
             <div class="head-image"></div>
@@ -44,7 +81,7 @@
         </div>
         <div id="cn-overlay" class="cn-overlay"></div>
     </div>
-    <div class="blog-title content">
+    <div class="blog-title main-content">
         <figure class="avatar-wrapper animate">
             <a class="user-avatar" style="background-image: url(<?php bloginfo('template_url'); ?>/images/avatar.png)" href="/">
                 <img class="print-only invisible" alt="" src="<?php bloginfo('template_url'); ?>/images/avatar.png">
@@ -57,18 +94,4 @@
             <span class="description" style="color: rgba(68, 68, 68, 0.7);"> Akiba Rika's site </span>
         </div>
     </div>
-<?php } elseif (is_single()) { ?>
-    <div class="component">
-        <button class="cn-button" id="cn-button">+</button>
-        <div class="cn-wrapper" id="cn-wrapper">
-            <ul>
-                <li><a href="#"><span class="fa fa-home"></span></a></li>
-                <li><a href="#"><span class="fa fa-headphones"></span></a></li>
-                <li><a href="#"><span class="fa fa-desktop"></span></a></li>
-                <li><a href="#"><span class="fa fa-file"></span></a></li>
-                <li><a href="#"><span class="fa fa-cog"></span></a></li>
-            </ul>
-        </div>
-        <div id="cn-overlay" class="cn-overlay"></div>
-    </div>
-<?php } ?>
+<?php }?>
