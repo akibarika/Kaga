@@ -38,19 +38,7 @@
             </a>
         </nav>
     </div>
-    <div class="component">
-        <button class="cn-button" id="cn-button">+</button>
-        <div class="cn-wrapper" id="cn-wrapper">
-            <ul>
-                <li><a href="#"><span class="fa fa-home"></span></a></li>
-                <li><a href="#"><span class="fa fa-headphones"></span></a></li>
-                <li><a href="#"><span class="fa fa-desktop"></span></a></li>
-                <li><a href="#"><span class="fa fa-file"></span></a></li>
-                <li><a href="#"><span class="fa fa-cog"></span></a></li>
-            </ul>
-        </div>
-        <div id="cn-overlay" class="cn-overlay"></div>
-    </div>
+
 <?php } else {?>
     <div class="nav-menu-wrapper nav-menu-cover">
         <nav class="nav-menu">

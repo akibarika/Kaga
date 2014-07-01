@@ -18,7 +18,7 @@ get_header(); ?>
                     <p class="subline"><?php the_time('F j, Y') ?></p>
             </div>
         </header>
-        <button class="trigger" data-info="Click to see the header effect">
+        <button class="trigger" data-info="Click to read">
             <span>Trigger</span>
         </button>
         <article class="content">

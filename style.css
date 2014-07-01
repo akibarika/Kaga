@@ -95,6 +95,7 @@ p {
     margin-top: 4px;
     opacity: 1;
     transform-origin: 50% 50% 0;
+    -webkit-transition: transform 0.15s linear 0s;
     transition: transform 0.15s linear 0s;
     width: 20px;
 }
@@ -285,7 +286,6 @@ h1 a, .description{
     height: 14.5em;
     width: 14.5em;
     position: absolute;
-    position: fixed;
     bottom: -7.25em;
     right: -7.25em;
     border-radius: 50%;
@@ -553,8 +553,10 @@ h1 a, .description{
 }
 .intro-effect-fadeout:not(.notrans) .bg-img:after {
     transition-property: opacity;
+    -webkit-transition-property: opacity;
 }
 .intro-effect-fadeout:not(.notrans) .bg-img {
+    -webkit-transition-property: -webkit-transform;
     transition-property: transform;
 }
 .intro-effect-fadeout .bg-img:after {
@@ -572,6 +574,9 @@ h1 a, .description{
     opacity: 1;
 }
 .intro-effect-fadeout.modify .bg-img {
+    -webkit-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
     transform: translateY(-25%);
 }
 .intro-effect-fadeout .title {
@@ -583,6 +588,9 @@ h1 a, .description{
     position: absolute;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     width: 100%;
     z-index: 999;
 }
@@ -603,10 +611,14 @@ h1 a, .description{
     z-index: 999;
 }
 .intro-effect-fadeout:not(.notrans) .header p, .intro-effect-fadeout:not(.notrans) .content > div {
+    -webkit-transition-property:transform, opacity;
     transition-property: transform, opacity;
 }
 .intro-effect-fadeout .content > div {
     opacity: 0;
+    -ms-transform: translateY(350px);
+    -moz-transform: translateY(350px);
+    -webkit-transform: translateY(350px);
     transform: translateY(350px);
 }
 .content > div:not(.title) {
@@ -616,6 +628,9 @@ h1 a, .description{
 }
 .intro-effect-fadeout.modify .content > div {
     opacity: 1;
+    -webkit-transform:translateY(0px);
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
     transform: translateY(0px);
 }
 .content > div:not(.title) {
@@ -625,10 +640,16 @@ h1 a, .description{
 }
 .intro-effect-fadeout .header p.subline {
     opacity: 0;
+    -webkit-transform: translateX(-150px);
+    -ms-transform: translateX(-150px);
+    -moz-transform: translateX(-150px);
     transform: translateX(-150px);
 }
 .intro-effect-fadeout.modify .header p.subline {
     opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
     transform: translateX(0px);
 }
 .intro-effect-fadeout.modify .header h1, .intro-effect-fadeout .header p {
@@ -648,7 +669,69 @@ h1 a, .description{
     padding: 0 0 0.6em;
 }
 .intro-effect-fadeout:not(.notrans) .bg-img, .intro-effect-fadeout:not(.notrans) .bg-img:after, .intro-effect-fadeout:not(.notrans) .header h1, .intro-effect-fadeout:not(.notrans) .header p, .intro-effect-fadeout:not(.notrans) .content > div {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
     transition-duration: 0.5s;
+}
+button.trigger:before {
+    backface-visibility: hidden;
+    bottom: 100%;
+    color: #fff;
+    content: attr(data-info);
+    font-size: 0.35em;
+    left: -100%;
+    padding: 0.8em;
+    position: absolute;
+    width: 300%;
+}
+.container:not(.notrans) button.trigger {
+    -webkit-transition: opacity 0.3s ease 0.5s;
+    -moz-transition: opacity 0.3s ease 0.5s;
+    -ms-transition: opacity 0.3s ease 0.5s;
+    transition: opacity 0.3s ease 0.5s;
+}
+.container.modify:not(.notrans) button.trigger {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+}
+button.trigger {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    bottom: 40px;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    height: 1em;
+    left: 50%;
+    margin-left: -0.5em;
+    padding: 0;
+    position: fixed;
+    width: 1em;
+    z-index: 5000;
+}
+button.trigger span {
+    color: #fff;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+@media screen and (max-width: 752px) {
+    .title, .content {
+        font-size: 70%;
+    }
+    .post-nav-head a{
+        font-size: 80%;
+    }
+
+
 }
 
 @media screen and (max-width:480px) {
@@ -663,7 +746,15 @@ h1 a, .description{
     .csstransforms .cn-wrapper li {
         font-size: 1.52em;
     }
+    .title, .content {
+        font-size: 50%;
+    }
+
+    button.trigger::before {
+        display: none;
+    }
 }
+
 
 @media screen and (max-width:320px) {
     .no-csstransforms .cn-wrapper {
@@ -674,5 +765,12 @@ h1 a, .description{
     .no-csstransforms .cn-wrapper li {
         height: 3em;
         width: 3em;
+    }
+    .title, .content {
+        font-size: 50%;
+    }
+
+    button.trigger::before {
+        display: none;
     }
 }
