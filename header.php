@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,800,900,300,200,100' rel='stylesheet' type='text/css'>
     <script src="<?php bloginfo('template_directory'); ?>/js/imagesloaded.pkgd.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/insite.js"></script>
     <link href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" rel="stylesheet">
     <link rel="Shortcut Icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -36,6 +37,22 @@
                     <span class="bar-icon"></span>
                 </div>
             </a>
+            <div class="pop-menu">
+                <ul>
+                    <li class="search">
+                        <?php get_search_form(); ?>
+                    </li>
+                    <li>
+                        <a class="archive" href="/archive">
+                            Archive
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span>Theme <div class="kaga">Kaga</div> By Rika</span>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
 
@@ -49,6 +66,22 @@
                     <span class="bar-icon"></span>
                 </div>
             </a>
+            <div class="pop-menu">
+                <ul>
+                    <li class="search">
+                        <?php get_search_form(); ?>
+                    </li>
+                    <li>
+                        <a class="archive" href="/archive">
+                            Archive
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    <li>
+                        <span>Theme <div class="kaga">Kaga</div> By Rika</span>
+                    </li>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
     <header>

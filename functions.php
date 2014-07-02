@@ -11,6 +11,8 @@ set_post_thumbnail_size( 9999, 576, true);
 add_image_size( 'post-bg-img', 1337, 800, true );
 // register post formats
 add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+//add HTML5 From
+add_theme_support( 'html5', array( 'search-form' ) );
 // register post type label args
 function cutom_post_type_label_args($typeName){
     return $labels = array(
