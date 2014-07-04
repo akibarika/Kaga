@@ -10,15 +10,19 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Rika Akiba">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/modernizer.min.js"></script>
     <!-- style file -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,800,900,300,200,100' rel='stylesheet' type='text/css'>
-    <script src="<?php bloginfo('template_directory'); ?>/js/imagesloaded.pkgd.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/insite.js"></script>
     <link href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
+    <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles.less" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,800,900,300,200,100' rel='stylesheet' type='text/css'>
+    <!-- my less files-->
+    <script src="<?php bloginfo('template_directory'); ?>/js/less-1.7.3.min.js" type="text/javascript"></script>
+    <!-- js files-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/insite.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/modernizer.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/imagesloaded.pkgd.min.js"></script>
     <link rel="Shortcut Icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="<?php bloginfo('rss_url'); ?>" />
@@ -43,8 +47,8 @@
                         <?php get_search_form(); ?>
                     </li>
                     <li>
-                        <a class="archive" href="/archive">
-                            Archive
+                        <a class="home" href="/">
+                            Home
                             <i class="fa fa-angle-right fa-lg icon-right"></i>
                         </a>
                     </li>
@@ -72,8 +76,8 @@
                         <?php get_search_form(); ?>
                     </li>
                     <li>
-                        <a class="archive" href="/archive">
-                            Archive
+                        <a class="home" href="/">
+                            Home
                             <i class="fa fa-angle-right fa-lg icon-right"></i>
                         </a>
                     <li>
@@ -105,7 +109,6 @@
     <div class="blog-title main-content">
         <figure class="avatar-wrapper animate">
             <a class="user-avatar" style="background-image: url(<?php bloginfo('template_url'); ?>/images/avatar.png)" href="/">
-                <img class="print-only invisible" alt="" src="<?php bloginfo('template_url'); ?>/images/avatar.png">
             </a>
         </figure>
         <div class="title-group animate">
