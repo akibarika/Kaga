@@ -47,8 +47,26 @@
                         <?php get_search_form(); ?>
                     </li>
                     <li>
-                        <a class="home" href="/">
+                        <a href="/">
                             Home
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Link
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Work
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Blog
                             <i class="fa fa-angle-right fa-lg icon-right"></i>
                         </a>
                     </li>
@@ -76,10 +94,29 @@
                         <?php get_search_form(); ?>
                     </li>
                     <li>
-                        <a class="home" href="/">
+                        <a href="/">
                             Home
                             <i class="fa fa-angle-right fa-lg icon-right"></i>
                         </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Link
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Work
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Blog
+                            <i class="fa fa-angle-right fa-lg icon-right"></i>
+                        </a>
+                    </li>
                     <li>
                         <span>Theme <div class="kaga">Kaga</div> By Rika</span>
                     </li>
